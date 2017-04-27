@@ -3,7 +3,7 @@ package me.jojigarcia.model;
 /**
  * Created by joaquinjimenezgarcia on 27/4/17.
  */
-public class Available {
+public abstract class Available {
     private int code;
     private String title;
     private int year;

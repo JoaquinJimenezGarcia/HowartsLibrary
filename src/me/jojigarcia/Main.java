@@ -1,10 +1,12 @@
 package me.jojigarcia;
 
+import me.jojigarcia.model.Book;
+
 public class Main {
 
     public static void main(String[] args) {
-        java.util.Date fechaActual = new java.util.Date();
+        Book libro = new Book();
 
-        System.out.println(fechaActual);
+        System.out.println(libro);
     }
 }
