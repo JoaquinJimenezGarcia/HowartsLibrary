@@ -1,12 +1,10 @@
 package me.jojigarcia;
 
-import me.jojigarcia.model.Book;
+import me.jojigarcia.controller.AppInterface;
 
 public class Main {
 
     public static void main(String[] args) {
-        Book libro = new Book();
-
-        System.out.println(libro);
+        AppInterface.run();
     }
 }
