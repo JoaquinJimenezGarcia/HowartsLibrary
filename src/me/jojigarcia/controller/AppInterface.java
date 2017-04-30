@@ -37,6 +37,7 @@ public class AppInterface {
     }
 
     private static Available selectLoan(){
+        java.util.Date date = new java.util.Date();
         Scanner input = new Scanner (System.in);
         int option;
         Available available;
@@ -62,13 +63,13 @@ public class AppInterface {
 
         switch (option){
             case 1:
-                available = new Book(code,title,year);
+                available = new Book(code,title,year,date);
                 break;
             case 2:
                 available = new Daily(code,title,year);
                 break;
             default:
-                available = new Book(code,title,year);
+                available = new Book(code,title,year,date);
                 break;
         }
 
