@@ -18,9 +18,9 @@ public class Book extends Available implements Loan{
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "Book( " +
                 "date=" + date +
-                '}';
+                super.toString();
     }
 
     public void date(){

@@ -58,10 +58,9 @@ public abstract class Available {
 
     @Override
     public String toString() {
-        return "Available{" +
-                "code=" + code +
-                ", title='" + title + '\'' +
+        return "title=" + title +
+                ", code='" + code + '\'' +
                 ", year='" + year + '\'' +
-                '}';
+                ')';
     }
 }
