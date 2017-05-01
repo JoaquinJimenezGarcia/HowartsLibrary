@@ -13,7 +13,9 @@ public class Daily extends Available implements Loan{
         super(code, title, year);
     }
 
-    public void date(){
+    public int toReturn(){
         int days = 30;
+
+        return days;
     }
 }

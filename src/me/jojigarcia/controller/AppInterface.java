@@ -53,7 +53,7 @@ public class AppInterface {
         }while (option != 1 && option != 2);
 
         System.out.println("Inserte el título: ");
-        title = input.nextLine();
+        title = input.next();
 
         System.out.println("Inserte el código: ");
         code = input.nextInt();
@@ -63,13 +63,13 @@ public class AppInterface {
 
         switch (option){
             case 1:
-                available = new Book(code,title,year,date);
+                available = new Book(code,title,year);
                 break;
             case 2:
                 available = new Daily(code,title,year);
                 break;
             default:
-                available = new Book(code,title,year,date);
+                available = new Book(code,title,year);
                 break;
         }
 

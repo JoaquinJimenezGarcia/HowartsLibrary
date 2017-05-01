@@ -58,9 +58,9 @@ public abstract class Available {
 
     @Override
     public String toString() {
-        return "title=" + title +
-                ", code='" + code + '\'' +
-                ", year='" + year + '\'' +
-                ')';
+        return " - title = " + title +
+                ", code = " + code +
+                ", year = " + year +
+                " )";
     }
 }
