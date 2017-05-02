@@ -14,6 +14,14 @@ public class Daily extends Available implements Loan{
         this.date  = new java.util.Date();
     }
 
+    @Override
+    public String toString() {
+        return "Daily( " +
+                "date = " + date +
+                " ha devolver en "+toReturn() + " días " +
+                super.toString();
+    }
+
     public int toReturn(){
         int days = 30;
 
