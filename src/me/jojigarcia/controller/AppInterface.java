@@ -23,35 +23,23 @@ public class AppInterface {
 
         switch (menuOption){
             case 1:
-                selectLoan();
+                toLoan();
                 break;
             case 2:
-                selectLoan();
+                //toRevise();
                 break;
             default:
                 break;
         }
     }
 
-    private static void toLoan(){
-
-    }
-
-    private static Available selectLoan(){
-        java.util.Date date = new java.util.Date();
+    private static Available toLoan(){
         Scanner input = new Scanner (System.in);
-        int option;
         Available available;
         int code;
         String title;
         int year;
-
-        do {
-            System.out.println("1. Libros");
-            System.out.println("2. Diarios");
-            System.out.println("Qué desea alquilar? ");
-            option = input.nextInt();
-        }while (option != 1 && option != 2);
+        int option = selectLoan();
 
         System.out.println("Inserte el título: ");
         title = input.next();
@@ -77,5 +65,19 @@ public class AppInterface {
         System.out.println(available);
 
         return available;
+    }
+
+    private static int selectLoan(){
+        Scanner input = new Scanner (System.in);
+        int option;
+
+        do {
+            System.out.println("1. Libros");
+            System.out.println("2. Diarios");
+            System.out.println("Qué desea alquilar? ");
+            option = input.nextInt();
+        }while (option != 1 && option != 2);
+
+        return option;
     }
 }
