@@ -26,6 +26,7 @@ public class AppInterface {
                 selectLoan();
                 break;
             case 2:
+                selectLoan();
                 break;
             default:
                 break;

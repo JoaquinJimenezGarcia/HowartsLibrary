@@ -11,6 +11,7 @@ public class Daily extends Available implements Loan{
 
     public Daily(int code, String title, int year) {
         super(code, title, year);
+        this.date  = new java.util.Date();
     }
 
     public int toReturn(){
