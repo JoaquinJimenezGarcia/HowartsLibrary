@@ -1,8 +1,6 @@
 package me.jojigarcia.controller;
 
-import me.jojigarcia.model.Available;
-import me.jojigarcia.model.Book;
-import me.jojigarcia.model.Daily;
+import me.jojigarcia.model.*;
 
 import java.util.Scanner;
 
@@ -26,7 +24,7 @@ public class AppInterface {
                 toLoan();
                 break;
             case 2:
-                //toRevise();
+                toRevision();
                 break;
             default:
                 break;
@@ -74,6 +72,54 @@ public class AppInterface {
         do {
             System.out.println("1. Libros");
             System.out.println("2. Diarios");
+            System.out.println("Qué desea alquilar? ");
+            option = input.nextInt();
+        }while (option != 1 && option != 2);
+
+        return option;
+    }
+
+    private static Available toRevision(){
+        Scanner input = new Scanner (System.in);
+        Available available;
+        int code;
+        String title;
+        int year;
+        int option = selectRevision();
+
+        System.out.println("Inserte el título: ");
+        title = input.next();
+
+        System.out.println("Inserte el código: ");
+        code = input.nextInt();
+
+        System.out.println("Inserte el año: ");
+        year = input.nextInt();
+
+        switch (option){
+            case 1:
+                available = new Map(code,title,year);
+                break;
+            case 2:
+                available = new Parchment(code,title,year);
+                break;
+            default:
+                available = new Map(code,title,year);
+                break;
+        }
+
+        System.out.println(available);
+
+        return available;
+    }
+
+    private static int selectRevision(){
+        Scanner input = new Scanner (System.in);
+        int option;
+
+        do {
+            System.out.println("1. Pergaminos");
+            System.out.println("2. Mapas");
             System.out.println("Qué desea alquilar? ");
             option = input.nextInt();
         }while (option != 1 && option != 2);

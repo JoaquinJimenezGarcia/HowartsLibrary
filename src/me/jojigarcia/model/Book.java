@@ -1,7 +1,5 @@
 package me.jojigarcia.model;
 
-import java.util.Date;
-
 /**
  * Created by joaquinjimenezgarcia on 27/4/17.
  */
